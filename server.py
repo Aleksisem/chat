@@ -53,7 +53,7 @@ def receive():
 
     # Уведломляет всех клиентов о подключении нового клиента
     print('Никнейм: {}'.format(nickname))
-    broadcast('{} подключен'.format(nickname).encode('utf-8'))
+    broadcast(client, '{} подключен'.format(nickname).encode('utf-8'))
     client.send('Подключен к серверу'.encode('utf-8'))
 
     # Запуск потока по захвату сообщений
